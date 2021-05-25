@@ -9,8 +9,8 @@ export class SlotService {
 
   constructor(private http: HttpClient) { }
 
-  getSlots(pincode:string):Observable<any>{
-    return this.http.get<any>(`https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode=${pincode}&date=25-05-2021`);
+  getSlots(pincode:string,date:string):Observable<any>{
+    return this.http.get<any>(`https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode=${pincode}&date=${date}`);
   }
 }
 
