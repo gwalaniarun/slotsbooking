@@ -1,0 +1,34 @@
+<h3>Pincode 383315</h3>
+<br>
+<div *ngIf="sessions">
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Total Dose</th>
+          <th scope="col">Dose 1</th>
+          <th scope="col">Dose 2</th>
+          <th scope="col">Age</th>
+          <th scope="col">Vaccine</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let myslot of sessions">
+          <td>{{myslot.name}}</td>
+          <td>{{myslot.available_capacity}}</td>
+          <td>{{myslot.available_capacity_dose1}}</td>
+          <td>{{myslot.available_capacity_dose2}}</td>
+          <td>{{myslot.min_age_limit}}</td>
+          <td>{{myslot.vaccine}}</td>
+          </tr>
+    
+    
+    </tbody>
+</table>
+</div>
+
+
+<!-- 
+<div *ngFor="let slot of sessions">
+    <p>{{slot.available_capacity}}</p>
+    </div> -->
